@@ -52,6 +52,7 @@ class Parser {
 
   // 消耗当前词法单元
   consume() {
+    // 如果不处于非推断状态，父节点添加以当前词法单元节点构造的子节点
     if (!this.isSpeculating()) {
       const ctx = new TerminalNodeImpl(this.LT(1));
       this._ctx.addChild(ctx);
