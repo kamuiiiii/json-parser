@@ -1,6 +1,6 @@
-import Visitor from './visitor.js';
+import Visitor from './lib/visitor.js';
 
-export default class TestVisitor extends Visitor {
+export default class MyVisitor extends Visitor {
 
 	visitValue(ctx) {
 		if (ctx.obj()) {
